@@ -4,6 +4,10 @@ public class Entity {
 
 	private int health;
 	
+	public Entity(int h) {
+		health = h;
+	}
+	
 	public int getHealth() {
 		return health;
 	}
