@@ -16,6 +16,11 @@ public class Player extends Entity {
 		return name;
 	}
 	
+	@Override
+	public String getType() {
+		return "Player";
+	}
+	
 	public double getMoney() {
 		return money;
 	}

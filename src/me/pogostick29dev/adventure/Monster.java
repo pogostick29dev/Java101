@@ -11,4 +11,9 @@ public class Monster extends Entity {
 	public int getLevel() {
 		return level;
 	}
+	
+	@Override
+	public String getType() {
+		return "Monster";
+	}
 }

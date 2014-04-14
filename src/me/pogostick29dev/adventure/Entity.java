@@ -1,6 +1,6 @@
 package me.pogostick29dev.adventure;
 
-public class Entity {
+public abstract class Entity implements Damageable {
 
 	private int health;
 	
@@ -19,4 +19,6 @@ public class Entity {
 	public void modifyHealth(int h) {
 		health += h;
 	}
+	
+	public abstract String getType();
 }
