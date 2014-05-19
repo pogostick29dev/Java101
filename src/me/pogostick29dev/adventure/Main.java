@@ -1,5 +1,6 @@
 package me.pogostick29dev.adventure;
 
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -8,6 +9,12 @@ public class Main {
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
 		Random rand = new Random();
+		
+		ArrayList<String> msgs = new ArrayList<String>();
+		msgs.add("Hey there.");
+		msgs.add("How are you today?");
+		msgs.add("Nice weather we've been having!");
+		msgs.add("This game is amazing! Oops, I just broke the fourth wall.");
 		
 		print("What is your name?");
 		
@@ -61,14 +68,20 @@ public class Main {
 			}
 			
 			else if (input == 3) { // Talk to the townspeople.
-				String[] msgs = new String[] {
-						"Hey there.",
-						"How are you today?",
-						"Nice weather we've been having!",
-						"This game is amazing! Oops, I just broke the fourth wall."
-						};
+//				String[] msgs = new String[] {
+//						"Hey there.",
+//						"How are you today?",
+//						"Nice weather we've been having!",
+//						"This game is amazing! Oops, I just broke the fourth wall."
+//				};
 				
-				print(msgs[rand.nextInt(msgs.length)]);
+				if (msgs.size() != 0) {
+					String msg = msgs.get(rand.nextInt(msgs.size()));
+					print(msg);
+					msgs.remove(msg);
+				} else {
+					print("*Silence*");
+				}
 			}
 			
 			else {
